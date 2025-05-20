@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Kezia</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1, p {
+      animation: fadeInUp 2s ease forwards;
+      opacity: 0;
+    }
+
+    h1 {
+      color: #c2185b;
+      font-size: 2.7rem;
+      margin-bottom: 1rem;
+      animation-delay: 1s;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #444;
+      max-width: 400px;
+      animation-delay: 2s;
+    }
+
+    .rose-img {
+      width: 150px;
+      margin-bottom: 20px;
+      animation: rotateBloom 5s linear infinite;
+    }
+
+    .blackpink-img {
+      width: 120px;
+      margin: 15px 0;
+      border-radius: 12px;
+      animation: popIn 2s ease forwards;
+      opacity: 0;
+      animation-delay: 3s;
+    }
+
+    .your-photo {
+      width: 120px;
+      margin-top: 20px;
+      border-radius: 50%;
+      border: 3px solid #c2185b;
+      animation: popIn 2s ease forwards;
+      opacity: 0;
+      animation-delay: 4s;
+    }
+
+    audio {
+      display: none;
+    }
+
+    @keyframes rotateBloom {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Rose Image -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Red_Rose_Flower.png/600px-Red_Rose_Flower.png" alt="Rose" class="rose-img"/>
+
+  <!-- Main Message -->
+  <h1>Happy Birthday Kezia Jangmi</h1>
+  <p>May your step ahead be as beautiful as a <strong>jangmi</strong> 🌹</p>
+
+  <!-- Rose Blackpink Image -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Ros%C3%A9_at_Gaon_Chart_Music_Awards_on_January_23%2C_2019.jpg/440px-Ros%C3%A9_at_Gaon_Chart_Music_Awards_on_January_23%2C_2019.jpg" 
+       alt="Rosé from Blackpink" class="blackpink-img"/>
+
+</body>
+</html>
