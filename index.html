@@ -38,75 +38,68 @@
       animation-delay: 2s;
     }
 
-    .rose-img {
+    .kezia-img {
       width: 150px;
       margin-bottom: 20px;
-      animation: rotateBloom 5s linear infinite;
-    }
-
-    .blackpink-img {
-      width: 120px;
-      margin: 15px 0;
-      border-radius: 12px;
-      animation: popIn 2s ease forwards;
-      opacity: 0;
-      animation-delay: 3s;
-    }
-
-    .your-photo {
-      width: 120px;
-      margin-top: 20px;
       border-radius: 50%;
-      border: 3px solid #c2185b;
-      animation: popIn 2s ease forwards;
-      opacity: 0;
-      animation-delay: 4s;
+      animation: rotate 5s linear infinite;
+      transition: animation-duration 0.5s;
+    }
+
+    .spin-harder {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .spin-harder:hover {
+      background-color: #c2185b;
     }
 
     audio {
       display: none;
     }
 
-    @keyframes rotateBloom {
+    @keyframes rotate {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
 
     @keyframes fadeInUp {
-      from {
-        transform: translateY(40px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes popIn {
-      from { transform: scale(0.5); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Background Music -->
+  <!-- Music -->
   <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+    <source src="music.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- Rose Image -->
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Red_Rose_Flower.png/600px-Red_Rose_Flower.png" alt="Rose" class="rose-img"/>
+  <!-- Kezia's Photo -->
+  <img src="kezia-1.png" alt="Kezia" class="kezia-img" id="photo" />
 
-  <!-- Main Message -->
-  <h1>Happy Birthday Kezia Jangmi</h1>
-  <p>May your step ahead be as beautiful as a <strong>jangmi</strong> 🌹</p>
+  <!-- Message -->
+  <h1>Happy Birthday, Kezia 🌹</h1>
+  <p>May your heart always bloom with joy, and your steps ahead be as graceful as a <strong>jangmi</strong> 🌹</p>
 
-  <!-- Rose Blackpink Image -->
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Ros%C3%A9_at_Gaon_Chart_Music_Awards_on_January_23%2C_2019.jpg/440px-Ros%C3%A9_at_Gaon_Chart_Music_Awards_on_January_23%2C_2019.jpg" 
-       alt="Rosé from Blackpink" class="blackpink-img"/>
+  <!-- Spin Button -->
+  <button class="spin-harder" onclick="spinHarder()">Spin Harder!</button>
+
+  <script>
+    function spinHarder() {
+      const img = document.getElementById('photo');
+      img.style.animationDuration = "1s";
+    }
+  </script>
 
 </body>
 </html>
